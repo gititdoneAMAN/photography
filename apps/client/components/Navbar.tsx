@@ -24,7 +24,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <nav className="flex fixed w-full justify-between items-center p-2 md:px-5 md:pb-4 md:pt-4 bg-transparent backdrop-blur-lg">
+    <nav className="flex z-10 fixed w-full justify-between items-center p-2 md:px-5 md:pb-4 md:pt-4 bg-transparent backdrop-blur-lg">
       <div className="flex gap-2 items-center justify-center">
         <Image src={logo} alt="logo" className="h-10 w-10 rounded-full" />
         <span className="text-2xl font-['lexend']">Pics&Pixel</span>
@@ -33,11 +33,11 @@ const Navbar = () => {
         {showHamburger ? (
           <Hamburger />
         ) : (
-          <ul className="md:visible flex gap-8 text-md font-['lexend']">
+          <ul className="md:visible flex items-center  gap-8 text-md font-['lexend_Deca'] font-light">
             <li>Services</li>
             <li>Gallery</li>
             <li>About</li>
-            <li>Contact</li>
+            <li className="py-2 px-3 bg-black text-white rounded">Contact</li>
           </ul>
         )}
       </div>
