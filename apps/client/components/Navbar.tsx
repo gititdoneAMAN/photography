@@ -53,7 +53,7 @@ const Navbar = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="fixed h-[100vh] w-[100vw] inset-0 z-200 bg-black flex flex-col justify-center items-center text-white"
+                  className="fixed h-[100vh] w-[100vw] inset-0 z-50 bg-black flex flex-col justify-center items-center text-white"
                 >
                   <div className="absolute top-5 right-5">
                     <CloseIcon onClick={() => setShowMenu(!showMenu)} />
