@@ -6,7 +6,6 @@ export default function Page(): JSX.Element {
   return (
     <div className="w-full overflow-x-hidden">
       <Hero />
-      <Hero />
     </div>
   );
 }
