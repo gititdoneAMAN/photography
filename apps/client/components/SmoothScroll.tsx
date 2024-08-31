@@ -6,7 +6,7 @@ function SmoothScroll({ children }: { children: React.ReactNode }) {
     <ReactLenis
       root
       options={{
-        duration: 2.2,
+        duration: 2.5,
         syncTouch: true,
       }}
     >
