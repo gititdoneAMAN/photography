@@ -2,20 +2,14 @@ import Image from "next/image";
 import React from "react";
 import quoteIcon from "../public/double-quotes-svgrepo-com.svg";
 
-const ReviewCard = () => {
+const ReviewCard = ({ review, author }: { review: string; author: string }) => {
   return (
     <div className="bg-white p-5 max-h-[500px] rounded-3xl h-full flex-col justify-center items-center">
       <div className="relative size-9">
         <Image src={quoteIcon} layout="fill" alt="quote" />
       </div>
-      <p className="text-justify text-sm md:text-base mt-5 font-['lexend'] text-gray-600">
-        - Excellent service and top-notch print quality. She (Amala )went above
-        and beyond to ensure my photos turned out perfectly. - Fast turnaround
-        time, friendly staff, and stunning photo quality. I highly recommend Pix
-        and Pixel for all your printing needs - The attention to detail and care
-        taken by Pix and Pixel is impressive. My photos look amazing, - From
-        film development to digital printing, Pix and Pixel delivers exceptional
-        results every time. A true gem for photography enthusiasm
+      <p className="text-justify text-sm md:text-base mt-5 font-['lexend_Deca'] font-light text-gray-600">
+        {review}
       </p>
       <div className="flex gap-1 items-center justify-center my-5">
         <StarIcon />
@@ -24,7 +18,7 @@ const ReviewCard = () => {
         <StarIcon />
         <StarIcon />
       </div>
-      <p className="text-gray-600 text-right">-Shylini Nag</p>
+      <p className="text-gray-600 text-right">-{author}</p>
     </div>
   );
 };
