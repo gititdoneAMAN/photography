@@ -5,6 +5,7 @@ import Image1 from "../../../public/Golden_Hour10-scaled.jpg";
 import Image2 from "../../../public/DSC03487-2048x1366.jpg";
 import Link from "next/link";
 import Message from "../../../components/Message";
+import Services from "../../../components/Services";
 
 const page = () => {
   return (
@@ -55,6 +56,9 @@ const page = () => {
               their photographs exceed their expectations.
             </p>
           </div>
+        </div>
+        <div>
+          <Services />
         </div>
         <Message />
       </div>
