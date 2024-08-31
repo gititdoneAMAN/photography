@@ -1,4 +1,5 @@
 import React from "react";
+import Background from "../public/16704318_rose_gold_ethnic_patterned_background_2705.jpg";
 
 const HeroText = () => {
   return (

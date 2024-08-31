@@ -32,7 +32,7 @@ const ContactForm = () => {
               id="email"
               required
               className="p-2 rounded-3xl"
-              placeholder="aman@example.com"
+              placeholder="aman@gmail.com"
             />
           </div>
           <div className="flex w-full flex-col">

@@ -53,10 +53,10 @@ const ServicesCard = ({
   }, []);
 
   return (
-    <div className="grid w-full gap-5 grid-cols-1 md:grid-cols-2">
+    <div className="grid w-full gap-2.5 grid-cols-1 md:grid-cols-2">
       <div className="flex mb-10 flex-col gap-2">
         <div className="flex gap-1 items-center">
-          <div className="size-4 bg-black rounded-full relative">
+          <div className="size-3 md:size-4 bg-black rounded-full relative">
             <Image
               src={gradientTmage}
               layout="fill"
@@ -64,7 +64,9 @@ const ServicesCard = ({
               className="w-full absolute h-full object-cover rounded-full"
             />
           </div>
-          <span className="font-['lexend'] font-light text-lg">{Service1}</span>
+          <span className="font-['lexend'] font-light text-sm md:text-base">
+            {Service1}
+          </span>
         </div>
         <motion.div
           whileHover={{ scale: 0.985 }}
@@ -93,7 +95,7 @@ const ServicesCard = ({
       </div>
       <div className="flex mb-10 flex-col gap-2">
         <div className="flex gap-1 items-center">
-          <div className="size-4 bg-black rounded-full relative">
+          <div className="size-3 md:size-4 bg-black rounded-full relative">
             <Image
               src={gradientTmage}
               layout="fill"
@@ -101,7 +103,9 @@ const ServicesCard = ({
               className="w-full absolute h-full object-cover rounded-full"
             />
           </div>
-          <span className="font-['lexend'] font-light text-lg">{Service2}</span>
+          <span className="font-['lexend'] font-light text-sm md:text-base">
+            {Service2}
+          </span>
         </div>
         <motion.div
           whileHover={{ scale: 0.985 }}
