@@ -8,94 +8,41 @@ import Image4 from "../../../public/DSC08137-scaled.jpg";
 import Image5 from "../../../public/DSC03912-scaled.jpg";
 import Image6 from "../../../public/20220706_231601-scaled.jpg";
 import Image7 from "../../../public/DSC06627-1536x1024.jpg";
-
-import { motion } from "framer-motion";
+import Message from "../../../components/Message";
+import ServicesCard from "../../../components/ServicesCard";
+import { AnimatePresence, motion } from "framer-motion";
 
 const page = () => {
   return (
-    <div className="w-full h-full pt-[6.5rem] mb-5 px-5 flex flex-col gap-5">
-      <div className="grid mb-5 max-h-screen w-full gap-5 grid-cols-1 md:grid-cols-2">
-        <motion.div
-          whileHover={{ scale: 1.015 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="bg-gray-100 relative aspect-square"
-        >
-          <Image
-            src={Image3}
-            layout="fill"
-            alt=""
-            className="w-full absolute h-full object-cover aspect-square"
-          />
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.015 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="bg-gray-100 relative aspect-square"
-        >
-          <Image
-            src={Image6}
-            layout="fill"
-            alt=""
-            className="w-full absolute h-full object-cover "
-            objectPosition="center"
-          />
-        </motion.div>
-      </div>
-      <div className="grid mb-5 max-h-screen w-full gap-5 grid-cols-1 md:grid-cols-2">
-        <motion.div
-          whileHover={{ scale: 1.015 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="bg-gray-100 relative aspect-square"
-        >
-          <Image
-            src={Image2}
-            layout="fill"
-            alt=""
-            className="w-full absolute h-full object-cover"
-          />
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.015 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="bg-gray-100 relative aspect-square"
-        >
-          <Image
-            src={Image7}
-            layout="fill"
-            alt=""
-            className="w-full absolute h-full object-cover "
-            objectPosition="center 30%"
-          />
-        </motion.div>
-      </div>
-      <div className="grid mb-5 max-h-screen w-full gap-5 grid-cols-1 md:grid-cols-2">
-        <motion.div
-          whileHover={{ scale: 1.015 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="bg-gray-100 relative aspect-square"
-        >
-          <Image
-            src={Image4}
-            layout="fill"
-            alt=""
-            className="w-full absolute h-full object-cover"
-          />
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.015 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="bg-gray-100 relative aspect-square"
-        >
-          <Image
-            src={Image5}
-            layout="fill"
-            alt=""
-            className="w-full absolute h-full object-cover "
-            objectPosition="center 30%"
-          />
-        </motion.div>
-      </div>
-    </div>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="w-full h-full pt-[6.5rem] mb-2.5 md:mb-5 px-2.5 md:px-5 flex flex-col gap-2.5"
+      >
+        <ServicesCard
+          Image1={Image3}
+          Image2={Image1}
+          Service1="Newborn Photography"
+          Service2="Interior Photography"
+        />
+        <ServicesCard
+          Image1={Image2}
+          Image2={Image7}
+          Service1="Model Photography"
+          Service2="Corporate Photography"
+        />
+        <ServicesCard
+          Image1={Image4}
+          Image2={Image6}
+          Service1="Couple Photography"
+          Service2="Event Photography"
+        />
+        <Message />
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
