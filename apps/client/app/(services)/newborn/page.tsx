@@ -1,5 +1,5 @@
 import React from "react";
-import ImagePageGrids from "../../../components/ImagePageGrids";
+
 import Message from "../../../components/Message";
 import Testimonial from "../../../components/Testimonial";
 
@@ -24,9 +24,7 @@ const page = () => {
             beginning of your baby's unique story with love and artistry.
           </p>
         </header>
-        <main>
-          <ImagePageGrids />
-        </main>
+        <main></main>
         <Testimonial />
         <Message />
       </div>
