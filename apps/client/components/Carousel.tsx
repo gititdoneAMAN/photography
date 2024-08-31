@@ -24,6 +24,7 @@ const Carousel = ({
         >
           <CrossIcon />
         </div>
+
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
