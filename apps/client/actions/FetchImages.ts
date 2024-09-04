@@ -7,10 +7,10 @@ import {
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 
 const s3client = new S3Client({
-  region: process.env.REGION || "us-east-1",
+  region: process.env.REGION ?? "us-east-1",
   credentials: {
-    accessKeyId: process.env.ACCESS_KEY_ID || "",
-    secretAccessKey: process.env.SECRET_ACCESS_KEY || "",
+    accessKeyId: process.env.ACCESS_KEY_ID ?? "",
+    secretAccessKey: process.env.SECRET_ACCESS_KEY ?? "",
   },
 });
 
